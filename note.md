@@ -8,7 +8,7 @@
 ng new my-app
 
 ## String Interpolation
-{{value}}
+{{value}} on html page, define in component js
 
 ## ng serve error
 '''
@@ -43,5 +43,13 @@ Node.js v20.6.1
 '''
 
 > solution： degrade node version
+
+
+
+## Property Binding
+<img [src]="imgSrc">
+
+## two-way Binding
+
 
 
