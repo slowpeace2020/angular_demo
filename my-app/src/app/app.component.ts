@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title: string;
+  numberOne: number = 1;
+  numberTwo: number = 2;
+  togglePokemon: boolean = false;
+
+  constructor() {
+    this.title = "teddy";
+  }
 
 }
