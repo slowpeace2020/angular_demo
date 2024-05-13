@@ -79,4 +79,15 @@ export class FoodService {
       },
     ]
   }
+
+  getAllFoodsByTag(tag: String): Food[] {
+    if(tag=="All"){
+      return this.getAll();
+    }else{
+      // @ts-ignore
+      return this.getAll().filter(food=>food.tags?.includes(tag));
+    }
+  }
+
+
 }
