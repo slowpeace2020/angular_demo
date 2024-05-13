@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,8 @@ export class AppComponent {
   numberOne: number = 1;
   numberTwo: number = 2;
   togglePokemon: boolean = false;
+  favoriteAnimal: string="panda"
+
 
   constructor() {
     this.title = "teddy";
