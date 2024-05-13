@@ -76,34 +76,40 @@ export class FoodService {
         origins: ['china'],
         stars: 4.0,
         imageUrl: '/assets/images/foods/food-6.png',
-        tags: ['FastFood', 'Chicken', 'Lunch','Spicy'],
+        tags: ['FastFood', 'Chicken', 'Lunch', 'Spicy'],
       },
     ]
   }
 
   getAllFoodsByTag(tag: String): Food[] {
-    if(tag=="All"){
+    if (tag == "All") {
       return this.getAll();
-    }else{
+    } else {
       // @ts-ignore
-      return this.getAll().filter(food=>food.tags?.includes(tag));
+      return this.getAll().filter(food => food.tags?.includes(tag));
     }
   }
 
-  getAllTags():Tag[]{
+  getAllTags(): Tag[] {
     return [
-      {'name':'FastFood','count':3},
-      {'name':'Rice','count':1},
-      {'name':'Lunch','count':3},
-      {'name':'Spicy','count':2},
-      {'name':'Cold','count':1},
-      {'name':'Ribs','count':1},
-      {'name':'Fry','count':1},
-      {'name':'SlowFood','count':1},
-      {'name':'Soup','count':1},
-      {'name':'Chicken','count':1}
+      {'name': 'FastFood', 'count': 3},
+      {'name': 'Rice', 'count': 1},
+      {'name': 'Lunch', 'count': 3},
+      {'name': 'Spicy', 'count': 2},
+      {'name': 'Cold', 'count': 1},
+      {'name': 'Ribs', 'count': 1},
+      {'name': 'Fry', 'count': 1},
+      {'name': 'SlowFood', 'count': 1},
+      {'name': 'Soup', 'count': 1},
+      {'name': 'Chicken', 'count': 1}
     ]
   }
 
 
+  getAllFoodsBySearchTerm(searchTerm: String) {
+    if (searchTerm) {
+      return this.getAll().filter(food => food.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    }
+    return this.getAll();
+  }
 }
