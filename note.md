@@ -43,6 +43,7 @@ Node.js v20.6.1
 '''
 
 > solution： degrade node version
+> nvm use 16
 
 
 
