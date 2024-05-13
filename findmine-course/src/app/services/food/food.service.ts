@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Food} from "../../shared/Food";
+import {Tag} from "../../shared/Tag";
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +32,7 @@ export class FoodService {
         origins: ['persia', 'middle east', 'china'],
         stars: 4.7,
         imageUrl: '/assets/images/foods/food-2.png',
-        tags: ['spicy', 'Lunch'],
+        tags: ['Spicy', 'Lunch'],
       },
       {
         id: 3,
@@ -39,10 +40,10 @@ export class FoodService {
         price: 5,
         cookTime: '10-15',
         favorite: false,
-        origins: ['germany', 'us'],
+        origins: ['africa', 'asia'],
         stars: 3.5,
         imageUrl: '/assets/images/foods/food-3.png',
-        tags: ['FastFood', 'cold'],
+        tags: ['FastFood', 'Cold'],
       },
       {
         id: 4,
@@ -75,7 +76,7 @@ export class FoodService {
         origins: ['china'],
         stars: 4.0,
         imageUrl: '/assets/images/foods/food-6.png',
-        tags: ['FastFood', 'chicken', 'Lunch'],
+        tags: ['FastFood', 'Chicken', 'Lunch','Spicy'],
       },
     ]
   }
@@ -87,6 +88,21 @@ export class FoodService {
       // @ts-ignore
       return this.getAll().filter(food=>food.tags?.includes(tag));
     }
+  }
+
+  getAllTags():Tag[]{
+    return [
+      {'name':'FastFood','count':3},
+      {'name':'Rice','count':1},
+      {'name':'Lunch','count':3},
+      {'name':'Spicy','count':2},
+      {'name':'Cold','count':1},
+      {'name':'Ribs','count':1},
+      {'name':'Fry','count':1},
+      {'name':'SlowFood','count':1},
+      {'name':'Soup','count':1},
+      {'name':'Chicken','count':1}
+    ]
   }
 
 
