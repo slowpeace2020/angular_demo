@@ -6,6 +6,7 @@ interface Pokemon {
   name:string,
   type:string,
   isCool:boolean,
+  isStylish: boolean,
 }
 
 @Component({
@@ -28,21 +29,28 @@ export class AppComponent {
     name:"pikachu",
     type:'electric',
     isCool: true,
+    isStylish:false,
   },{
     id: 2,
     name:"pikaf",
     type:'fly',
     isCool: true,
+    isStylish:false,
+
   },{
     id: 3,
     name:"squitle",
     type:'water',
     isCool: true,
+    isStylish:false,
+
   },{
     id: 4,
     name:"charmander",
     type:'fire',
     isCool: false,
+    isStylish:true,
+
   },
   ]
 
