@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+
+.container > * {
+  min-width: 25rem;
+  max-width: 40rem;
+}
+
+img {
+  border-radius: 3rem;
+  flex: 1 0;
+  object-fit: cover;
+  height: 35rem;
+  margin: 1rem;
+}
+
+.detail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  border-radius: 2rem;
+  color: black;
+  margin-left: 1rem;
+}
+
+.detail .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail .name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.detail .favorite {
+  color: #e72929;
+  font-size: 2.5rem;
+}
+
+.detail .favorite.not {
+  color: grey;
+}
+
+.detail .origins {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.detail .origins > span {
+  padding: .5rem;
+  font-size: 1.2rem;
+  margin: .5rem .5rem .5rem 0;
+  border-radius: 2rem;
+  background-color: aliceblue;
+}
+
+.detail .cook-time {
+  margin-top: 1rem;
+}
+
+.detail .cook-time span {
+  padding: .6rem 2rem .6rem 0;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+}
+
+.detail .price{
+  font-size: 1.8rem;
+  margin: 2rem 2rem 2rem 0;
+  color: green;
+}
+
+.detail .price::before{
+  content: "Price: ";
+  color: darkgray;
+}
+
+.detail button{
+  color: white;
+  background: #e72929;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  border: 5rem;
+  outline: none;
+}
