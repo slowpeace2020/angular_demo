@@ -10,6 +10,10 @@ export class FoodService {
   constructor() {
   }
 
+  getFoodById(id:number): Food{
+      return this.getAll().filter(food=>food.id==id)[0];
+  }
+
   getAll(): Food[] {
     return [
       {
