@@ -350,11 +350,13 @@
       </g>
     </svg>
     <h1 [innerHtml]="title"></h1>
-    <input [(ngModel)]="favoriteAnimal"/>
+<!--    <input [(ngModel)]="favoriteAnimal"/>-->
+    <input type="text" #pokemanName/>
+    <button (click)="handleClick(pokemanName.value)">Click template ref name</button>
     <p>{{favoriteAnimal}}</p>
-    <div>
-      <img [src]="imgSrc">
-    </div>
+<!--    <div>-->
+<!--      <img [src]="imgSrc">-->
+<!--    </div>-->
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632"
          viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>

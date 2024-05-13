@@ -14,9 +14,17 @@ export class AppComponent {
   togglePokemon: boolean = false;
   favoriteAnimal: string="panda"
 
+  pokemonName: string="12depokemonName";
+
+
+
 
   constructor() {
     this.title = "teddy";
+  }
+
+  handleClick(value:any){
+    console.log(value)
   }
 
 }
