@@ -9,13 +9,15 @@
         <span class="favorite" [class.not]="!food.favorite">
           ❤
         </span>
-        <star-rating
-          [value]="food.stars"
-          [totalstars]=5
-          checkedcolor="red"
-          uncheckedcolor="black"
-          size="18px"
-          [readonly]="true"></star-rating>
+        <div class="stars">
+          <star-rating
+            [value]="food.stars"
+            [totalstars]=5
+            checkedcolor="red"
+            uncheckedcolor="black"
+            size="18px"
+            [readonly]="true"></star-rating>
+        </div>
         <div class="product-item-footer">
           <div class="origins">
             <span *ngFor="let origin of food.origins">
