@@ -1,6 +1,13 @@
 import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 
+interface Pokemon {
+  id: number,
+  name:string,
+  type:string,
+  isCool:boolean,
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,6 +23,28 @@ export class AppComponent {
 
   pokemonName: string="12depokemonName";
 
+  pokemons: Pokemon[] = [{
+    id: 1,
+    name:"pikachu",
+    type:'electric',
+    isCool: true,
+  },{
+    id: 2,
+    name:"pikaf",
+    type:'fly',
+    isCool: true,
+  },{
+    id: 3,
+    name:"squitle",
+    type:'water',
+    isCool: true,
+  },{
+    id: 4,
+    name:"charmander",
+    type:'fire',
+    isCool: false,
+  },
+  ]
 
 
 
