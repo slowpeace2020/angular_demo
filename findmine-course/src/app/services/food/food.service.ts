@@ -20,7 +20,7 @@ export class FoodService {
         id: 1,
         name: 'Steamed Pork Ribs with Glutinous Rice',
         cookTime: '10-20',
-        price: 10,
+        price: 15,
         favorite: false,
         origins: ['china'],
         stars: 4.5,
@@ -30,7 +30,7 @@ export class FoodService {
       {
         id: 2,
         name: 'Preserved Egg with Red Chili Pepper',
-        price: 20,
+        price: 10,
         cookTime: '20-30',
         favorite: true,
         origins: ['persia', 'middle east', 'china'],
@@ -41,7 +41,7 @@ export class FoodService {
       {
         id: 3,
         name: 'Cold rice noodles',
-        price: 5,
+        price: 7,
         cookTime: '10-15',
         favorite: false,
         origins: ['africa', 'asia'],
@@ -52,7 +52,7 @@ export class FoodService {
       {
         id: 4,
         name: 'Steamed Pork Ribs with Black Bean Sauce',
-        price: 2,
+        price: 29,
         cookTime: '15-20',
         favorite: true,
         origins: ['Pork', 'meat'],
@@ -63,7 +63,7 @@ export class FoodService {
       {
         id: 5,
         name: 'Spicy Shrimp',
-        price: 11,
+        price: 21,
         cookTime: '40-50',
         favorite: false,
         origins: ['china', 'asia'],
@@ -74,7 +74,7 @@ export class FoodService {
       {
         id: 6,
         name: 'Spicy dry pot chicken',
-        price: 9,
+        price: 35,
         cookTime: '40-50',
         favorite: false,
         origins: ['china'],
