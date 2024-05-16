@@ -1,23 +1,8 @@
-<table>
-  <thead>
-  <th>Index</th>
-  <th>Name</th>
-  <th>Type</th>
-  </thead>
-  <tbody>
-  <tr *ngFor="let pokemon of pokemons; let i=index">
-    <!--    way1-->
-    <!--    <td [class.cool-bool]="pokemon.isCool">{{pokemon.id}}</td>-->
-    <!--    way 2-->
-    <td [ngClass]="{'cool-bool':pokemon.isCool}">{{pokemon.id}}</td>
-    <td>{{pokemon.name}}</td>
-    <td>{{pokemon.type}}</td>
-  </tr>
-  <tr *ngFor="let pokemon of pokemons; let i=index">
-    <td class="pokemon-td" [style.background-color]="(pokemon.isStylish?'#800080':'')">{{i}}:{{pokemon.name}}</td>
-  </tr>
-  <tr *ngFor="let pokemon of pokemons; let i=index">
-    <td class="pokemon-td" [ngStyle]= "{'backgroundColor':(pokemon.isStylish?'#800080':'')}">{{i}}:{{pokemon.name}}</td>
-  </tr>
-  </tbody>
-</table>
+
+
+<div>
+  <input placeholder="test" [value]="pokemonName" (input)="handleChange($event)"/>
+  <p>{{pokemonName}}</p>
+</div>
+
+<div *ngIf="!pokemonName">no search result</div>

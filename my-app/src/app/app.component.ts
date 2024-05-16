@@ -15,53 +15,17 @@ interface Pokemon {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string="mather's day";
-  imgSrc: string="https://y20india.in/wp-content/uploads/2024/05/1351266-o.webp"
-  numberOne: number = 1;
-  numberTwo: number = 2;
-  togglePokemon: boolean = false;
-  favoriteAnimal: string="panda"
-
-  pokemonName: string="12depokemonName";
-
-  pokemons: Pokemon[] = [{
-    id: 1,
-    name:"pikachu",
-    type:'electric',
-    isCool: true,
-    isStylish:false,
-  },{
-    id: 2,
-    name:"pikaf",
-    type:'fly',
-    isCool: true,
-    isStylish:false,
-
-  },{
-    id: 3,
-    name:"squitle",
-    type:'water',
-    isCool: true,
-    isStylish:false,
-
-  },{
-    id: 4,
-    name:"charmander",
-    type:'fire',
-    isCool: false,
-    isStylish:true,
-
-  },
-  ]
 
 
+  pokemonName:string="";
 
   constructor() {
-    this.title = "teddy";
   }
 
-  handleClick(value:any){
-    console.log(value)
+
+
+  handleChange(event:any){
+    this.pokemonName = event.target.value;
   }
 
 }
